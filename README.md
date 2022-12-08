@@ -1,27 +1,27 @@
-# CISC682Doodler\
+# CISC682Doodler
 
 IA08&09 assigments <br/>
 
-# To run the app:\
+# To run the app:
   Go to the MainActivity then pressthe run button<br/>
   My Doodle interface havs two main parts:<br/>
     1- A tool panel of widgets that allows the user to select brush size, color, and opacity as well as clear the current sketch <br/>
-    2- The doodling canvas itself -->
+    2- The doodling canvas itself --> <br/>
         a. a.You can draw directly <br/>
-        b. By pressing on any of the above feature, changes will apply direct to the current draw on your canvas\
+        b. By pressing on any of the above feature, changes will apply direct to the current draw on your canvas
 <br/>
 <br/>
-# References:\
-  Buttons \
+# References:
+  Buttons <br/>
   https://developer.android.com/develop/ui/views/components/button
   <br/>
-  How To Use Image Button With Android Studio To Do Anything\
+  How To Use Image Button With Android Studio To Do Anything<br/>
   https://www.youtube.com/watch?v=B_MQEzYnZ9A
   <br/>
-  Layouts\
+  Layouts<br/>
   https://developer.android.com/develop/ui/views/layout/declaring-layout#java
   <br/>
-  Comment\
+  Comment<br/>
   https://developer.android.com/reference/org/w3c/dom/Comment
   <br/>
   Linear Layout <br/>
