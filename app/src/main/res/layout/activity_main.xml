@@ -17,7 +17,7 @@
 
         <ImageButton
             android:id="@+id/brushButton"
-            android:layout_width="102dp"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
             android:backgroundTint="#FF210E45"
             android:contentDescription="@string/app_name"
@@ -26,7 +26,7 @@
 
         <ImageButton
             android:id="@+id/eraserButton"
-            android:layout_width="103dp"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
             android:backgroundTint="#FF210E45"
             android:contentDescription="@string/app_name"
@@ -34,7 +34,7 @@
 
         <ImageButton
             android:id="@+id/colorButton"
-            android:layout_width="103dp"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
             android:backgroundTint="#FF210E45"
             android:contentDescription="@string/app_name"
@@ -42,11 +42,19 @@
 
         <ImageButton
             android:id="@+id/opacityButton"
-            android:layout_width="102dp"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
             android:backgroundTint="#FF210E45"
             android:contentDescription="@string/app_name"
             app:srcCompat="@drawable/opacity" />
+
+        <ImageButton
+            android:id="@+id/saveButton"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#FF210E45"
+            android:contentDescription="@string/app_name"
+            app:srcCompat="@drawable/save" />
     </LinearLayout>
 
     <com.example.cisc682doodler.DoodleView

@@ -12,6 +12,7 @@ import android.graphics.Path;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.UUID;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -43,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ImageButton colorWheel = findViewById(R.id.colorButton);
         ImageButton eraser = findViewById(R.id.eraserButton);
         ImageButton opacity = findViewById(R.id.opacityButton);
+        ImageButton save = findViewById(R.id.saveButton);
 
         eraser.setOnClickListener(new View.OnClickListener() {
 
@@ -91,8 +96,54 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+        save.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                if (view.getId() == R.id.saveButton) {
+                    saveCanvas();
+
+                }
+            }
+        });
+
     }
 
+
+    public void saveCanvas(){
+        AlertDialog.Builder saveDialog = new AlertDialog.Builder(this);
+        saveDialog.setTitle("Save Drawing");
+        saveDialog.setMessage("Save your painting to the device Gallery?");
+        saveDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                doodleView.setDrawingCacheEnabled(true);
+                String imageSaved = MediaStore.Images.Media.insertImage(
+                        getContentResolver(), doodleView.getDrawingCache(),
+                        UUID.randomUUID().toString()+".png", "drawing");
+                if(imageSaved != null)
+                {
+                    Toast savedToast = Toast.makeText(getApplicationContext(),
+                            "Drawing saved to Gallery!", Toast.LENGTH_SHORT);
+                    savedToast.show();
+                }else
+                {
+                    Toast unsavedToast = Toast.makeText(getApplicationContext(),
+                            "Oops! Image could not saved.", Toast.LENGTH_SHORT);
+                    unsavedToast.show();
+                }
+                doodleView.destroyDrawingCache();
+            }
+        });
+        saveDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        saveDialog.show();
+    }
 
 
     /*public void colorWheel(View view) {
@@ -217,7 +268,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View view) {
                 if (view.getId() == R.id.blackCol) {
-                    paintColor = Color.parseColor("000000");
+                    paintColor = Color.parseColor("#000000");
                     doodleView.brushColor(paintColor);
                     colorDialog.dismiss();
                 }
@@ -229,14 +280,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View view) {
                 if (view.getId() == R.id.whiteCol) {
-                    paintColor = Color.parseColor("WHITE");
+                    paintColor = Color.parseColor("#FFFFFF");
                     doodleView.brushColor(paintColor);
                     colorDialog.dismiss();
                 }
             }
         });
 
-        blackCol.setOnClickListener(new View.OnClickListener() {
+        blueCol.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
