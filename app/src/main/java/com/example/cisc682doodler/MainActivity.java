@@ -291,7 +291,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             @Override
             public void onClick(View view) {
-                if (view.getId() == R.id.blackCol) {
+                if (view.getId() == R.id.blueCol) {
                     paintColor = Color.parseColor("#3700B3");
                     doodleView.brushColor(paintColor);
                     colorDialog.dismiss();
