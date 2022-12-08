@@ -2,6 +2,11 @@
 
 To run the app:
   Go to the MainActivity then pressthe run button
+  My Doodle interface havs two main parts:
+    1- A tool panel of widgets that allows the user to select brush size, color, and opacity as well as clear the current sketch 
+    2- The doodling canvas itself -->
+        a. a.You can draw directly 
+        b. By pressing on any of the above feature, changes will apply direct to the current draw on your canvas
 
 References:
   Buttons 
