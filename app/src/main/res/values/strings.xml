@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CISC682Doodler</string>
+    <string name="brush_size">Brush Size:</string>
+    <string name="white">White</string>
+    <string name="black">Black</string>
+    <string name="green">Green</string>
+    <string name="blue">Blue</string>
+    <string name="red">Red</string>
+</resources>

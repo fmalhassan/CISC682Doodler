@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawing"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/toolPanelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:background="#210E45">
+
+        <ImageButton
+            android:id="@+id/brushButton"
+            android:layout_width="102dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#FF210E45"
+            android:contentDescription="@string/app_name"
+            app:srcCompat="@drawable/brush"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <ImageButton
+            android:id="@+id/eraserButton"
+            android:layout_width="103dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#FF210E45"
+            android:contentDescription="@string/app_name"
+            app:srcCompat="@drawable/erase" />
+
+        <ImageButton
+            android:id="@+id/colorButton"
+            android:layout_width="103dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#FF210E45"
+            android:contentDescription="@string/app_name"
+            app:srcCompat="@drawable/color_wheel" />
+
+        <ImageButton
+            android:id="@+id/opacityButton"
+            android:layout_width="102dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#FF210E45"
+            android:contentDescription="@string/app_name"
+            app:srcCompat="@drawable/opacity" />
+    </LinearLayout>
+
+    <com.example.cisc682doodler.DoodleView
+        android:id="@+id/doodleView"
+        android:layout_width="match_parent"
+        android:layout_height="651dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="81dp"
+        android:background="#FFFFFFFF"
+        android:orientation="vertical" />
+
+</RelativeLayout>
