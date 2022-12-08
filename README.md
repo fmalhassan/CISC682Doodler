@@ -1,6 +1,6 @@
 # CISC682Doodler
 
-To run the app:
+# To run the app:
   Go to the MainActivity then pressthe run button
   My Doodle interface havs two main parts:
     1- A tool panel of widgets that allows the user to select brush size, color, and opacity as well as clear the current sketch 
@@ -8,7 +8,7 @@ To run the app:
         a. a.You can draw directly 
         b. By pressing on any of the above feature, changes will apply direct to the current draw on your canvas
 
-References:
+# References:
   Buttons 
   https://developer.android.com/develop/ui/views/components/button
   How To Use Image Button With Android Studio To Do Anything
